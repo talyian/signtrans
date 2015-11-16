@@ -1,0 +1,46 @@
+
+<style>
+  html, body { margin:0px; padding:0px; }
+  input { font-size:24pt; }
+  label { font-size:16pt; }
+  canvas{ background:#ace; }
+  #header{ top:0px; width:100%;}
+  #word { width:800px; }
+  #output { margin:10px auto; width:800px; background:#def; }
+  #logdiv {
+  position:fixed;
+  top:0px; right:0px; z-index:20;
+  color:blue; font-weight:bold;
+  }
+</style>
+<div id='logdiv'>
+</div>
+<div id=header>
+  <div id='bg'> </div>
+<form id='translate'>
+  <label for='word'>Enter a Word</label>
+<input type='text' id='word' value='welcome_to_yelp'/>
+</form>
+</div>
+<script>
+  Array.prototype.flatMap = function(f) { return [].concat.apply([], this.map(f)); }
+  Array.prototype.last = function(f) { return this[this.length-1]; }
+function log() {
+    var d = document.createElement("div");
+    d.innerHTML = Array.prototype.join.call(arguments, ', ');
+    document.getElementById('logdiv').appendChild(d);
+}
+translate.onsubmit = function(e) {
+  if (e) e.preventDefault();
+    console.log(word.value);
+    control.parse(word.value);
+    return false;
+};
+</script>
+<script src='three.js'> </script>
+<script src='lang.js'> </script>
+<script src='animation.js'> </script>
+<script src='index.js'> </script>
+<script>
+  control.onready = translate.onsubmit;
+</script>

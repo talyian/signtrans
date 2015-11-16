@@ -1,0 +1,18 @@
+{
+    "libs": [
+        "browser",
+        "jquery"
+    ],
+    "loadEagerly": [
+        "three.js",
+        "lang.js",
+        "animation.js",
+        "index.js"
+    ],
+    "plugins": {
+        "requirejs": {
+            "baseURL": "./",
+            "paths": {}
+        }
+    }
+}
