@@ -1,6 +1,8 @@
 # Sign Avatar
 
-Translates English to ASL (American Sign Language)
+Translates English to ASL (American Sign Language). 
+
+Done over a hackathon and REALLY REALLY incomplete. :( 
 
 
 ## What Works
